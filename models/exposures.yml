@@ -1,0 +1,12 @@
+version: 2
+
+exposures:
+  - name: supply_chain_kpis
+    type: dashboard
+    maturity: low
+    url: https://lookerstudio.google.com/reporting/your-public-link
+    depends_on:
+      - ref('kpi_daily_fulfillment')
+    owner:
+      name: Portfolio Owner
+      email: you@example.com

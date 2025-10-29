@@ -1,0 +1,16 @@
+name: supplychain_dbt
+profile: snowflake_portfolio
+version: 1.0.0
+config-version: 2
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+
+models:
+  supplychain_dbt:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+    metrics:
+      +materialized: table

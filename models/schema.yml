@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: raw
+    database: ANALYTICS
+    schema: RAW
+    tables:
+      - name: orders
+        freshness:
+          warn_after: {count: 2, period: hour}
+          error_after: {count: 6, period: hour}
+      - name: warehouses
+      - name: inventory_movements
+
+models:
+  - name: fct_orders
+    tests:
+      - not_null:
+          column_name: order_id
+      - unique:
+          column_name: order_id

@@ -1,0 +1,21 @@
+snowflake_portfolio:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: <account>           # e.g., xy12345.us-east-1
+      user: <user>
+      password: <password>
+      role: ANALYTICS_ROLE
+      database: ANALYTICS
+      warehouse: WH_TINY
+      schema: MODEL
+    prod:
+      type: snowflake
+      account: <account>
+      user: <user>
+      password: <password>
+      role: ANALYTICS_ROLE
+      database: ANALYTICS
+      warehouse: WH_TINY
+      schema: MODEL
