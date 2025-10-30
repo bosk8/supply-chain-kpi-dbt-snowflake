@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bosk8 Supply Chain KPIs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="bosk8">
+    <div class="container">
+      <section class="card border-b hero">
+        <h1 class="tagline">REAL-TIME SUPPLY CHAIN KPIs</h1>
+      </section>
+
+      <section class="card grid-tiles border-b">
+        <div class="tile border-r">
+          <span class="meta-sm">AVG FULFILLMENT HRS</span>
+          <div class="kpi-value" aria-live="polite">--</div>
+        </div>
+        <div class="tile">
+          <span class="meta-sm">ON-TIME RATE</span>
+          <div class="kpi-value" aria-live="polite">--</div>
+        </div>
+        <div class="tile border-r">
+          <span class="meta-sm">UNITS</span>
+          <div class="kpi-value" aria-live="polite">--</div>
+        </div>
+        <div class="tile">
+          <button class="link" aria-label="Open filters">Filters</button>
+        </div>
+      </section>
+
+      <section class="card table-section">
+        <div class="table-header meta-sm">WAREHOUSE BREAKDOWN</div>
+        <div class="table-wrapper">
+          <table class="data-table" role="table" aria-label="Warehouse KPI breakdown">
+            <thead>
+              <tr role="row">
+                <th scope="col" class="meta-sm">WAREHOUSE</th>
+                <th scope="col" class="meta-sm">AVG HRS</th>
+                <th scope="col" class="meta-sm">ON-TIME RATE</th>
+                <th scope="col" class="meta-sm">UNITS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr role="row">
+                <td>—</td><td>—</td><td>—</td><td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+
+
