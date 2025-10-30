@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warehouse — Bosk8 Supply Chain KPIs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <main class="bosk8" id="main-content">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="./index.html" class="link">DASHBOARD</a>
+        <span class="breadcrumb-separator" aria-hidden="true"> / </span>
+        <span class="breadcrumb-active">WAREHOUSE</span>
+      </nav>
+
+      <section class="card border-b">
+        <div style="padding: var(--space-2);">
+          <a href="./index.html" class="link" style="margin-bottom: var(--space-1); display: inline-block;">← Dashboard</a>
+          <div id="warehouse-header" class="meta-sm" style="margin-top: var(--space-1);">
+            <div>Warehouse: <span id="warehouse-id">--</span></div>
+            <div>City: <span id="warehouse-city">--</span></div>
+            <div>Capacity: <span id="warehouse-capacity">--</span> units</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card grid-tiles border-b">
+        <div class="tile border-r">
+          <span class="meta-sm">AVG FULFILLMENT HRS</span>
+          <div class="kpi-value" id="kpi-avg-hours" aria-live="polite" aria-label="Average fulfillment hours">--</div>
+        </div>
+        <div class="tile">
+          <span class="meta-sm">ON-TIME RATE</span>
+          <div class="kpi-value" id="kpi-on-time" aria-live="polite" aria-label="On-time rate">--</div>
+        </div>
+        <div class="tile border-r">
+          <span class="meta-sm">UNITS</span>
+          <div class="kpi-value" id="kpi-units" aria-live="polite" aria-label="Total units shipped">--</div>
+        </div>
+        <div class="tile"></div>
+      </section>
+
+      <section class="card table-section">
+        <div class="table-header meta-sm">RECENT ORDERS</div>
+        <div class="table-wrapper">
+          <table class="data-table" role="table" aria-label="Recent orders for warehouse">
+            <thead>
+              <tr role="row">
+                <th scope="col" class="meta-sm">ORDER ID</th>
+                <th scope="col" class="meta-sm">FULFILLMENT HRS</th>
+                <th scope="col" class="meta-sm">ON-TIME</th>
+                <th scope="col" class="meta-sm">QUANTITY</th>
+                <th scope="col" class="meta-sm">ORDER DATE</th>
+              </tr>
+            </thead>
+            <tbody id="orders-table-body">
+              <tr role="row">
+                <td colspan="5" class="empty-state">Loading orders...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="./warehouse.js"></script>
+</body>
+</html>
